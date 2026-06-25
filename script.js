@@ -6,7 +6,7 @@ const CORRECT = {
     email:   "john@hack.net"
 };
 
-const REDIRECT_URL = "tips.html";
+const REDIRECT_URL = "main.html";
 // ──────────────────────────────────────────────────
 
 // Toggle links

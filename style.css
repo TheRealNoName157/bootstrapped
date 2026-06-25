@@ -243,3 +243,123 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             margin-left: 10px;
             font-weight: normal;
         }
+                /* ── Ticker ── */
+        .ticker-wrap {
+            border-top: 1px solid var(--hack-green);
+            border-bottom: 1px solid var(--hack-green);
+            overflow: hidden;
+            padding: 10px 0;
+            margin: 28px 0;
+            background: rgba(1, 215, 5, 0.04);
+        }
+
+        .ticker-track {
+            display: flex;
+            width: max-content;
+            animation: ticker 40s linear infinite;
+        }
+
+        .ticker-track:hover {
+            animation-play-state: paused;
+        }
+
+        .ticker-item {
+            white-space: nowrap;
+            padding: 0 48px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            opacity: 0.85;
+        }
+
+        .ticker-item::before {
+            content: "// ";
+            opacity: 0.4;
+        }
+
+        @keyframes ticker {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ── Nav buttons ── */
+        .nav-btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 14px;
+            background: #000;
+            color: var(--hack-green);
+            border: 1px solid var(--hack-green);
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: left;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+            cursor: pointer;
+        }
+
+        .nav-btn:hover {
+            background: rgba(1, 215, 5, 0.08);
+            box-shadow: 0 0 14px var(--hack-green);
+            color: var(--hack-green);
+            transform: translateX(4px);
+        }
+
+        .nav-btn .btn-arrow {
+            float: right;
+            opacity: 0.5;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .nav-btn:hover .btn-arrow {
+            opacity: 1;
+            transform: translateX(4px);
+        }
+
+        .nav-btn .btn-sub {
+            display: block;
+            font-size: 11px;
+            font-weight: normal;
+            opacity: 0.5;
+            margin-top: 3px;
+            letter-spacing: 2px;
+        }
+
+        /* ── Welcome header ── */
+        .welcome-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            opacity: 0.45;
+            margin-bottom: 4px;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--hack-green);
+            box-shadow: 0 0 6px var(--hack-green);
+            margin-right: 6px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50%       { opacity: 0.3; }
+        }
+
+        .divider {
+            border-top: 1px solid rgba(1, 215, 5, 0.25);
+            margin: 24px 0;
+        }
+
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            opacity: 0.4;
+            margin-bottom: 14px;
+        }
