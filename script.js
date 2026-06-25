@@ -73,19 +73,3 @@ function showError(msg) {
         card.style.boxShadow = "";
     }, 600);
 }
-        document.querySelectorAll(".tut-header").forEach(header => {
-            header.addEventListener("click", function () {
-                const body = this.nextElementSibling;
-                const isOpen = body.classList.contains("open");
-
-                // Close all
-                document.querySelectorAll(".tut-body").forEach(b => b.classList.remove("open"));
-                document.querySelectorAll(".tut-header").forEach(h => h.classList.remove("open"));
-
-                // Open clicked one if it was closed
-                if (!isOpen) {
-                    body.classList.add("open");
-                    this.classList.add("open");
-                }
-            });
-        });

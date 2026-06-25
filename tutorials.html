@@ -185,6 +185,23 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script>        
+            document.querySelectorAll(".tut-header").forEach(header => {
+            header.addEventListener("click", function () {
+                const body = this.nextElementSibling;
+                const isOpen = body.classList.contains("open");
+
+                // Close all
+                document.querySelectorAll(".tut-body").forEach(b => b.classList.remove("open"));
+                document.querySelectorAll(".tut-header").forEach(h => h.classList.remove("open"));
+
+                // Open clicked one if it was closed
+                if (!isOpen) {
+                    body.classList.add("open");
+                    this.classList.add("open");
+                }
+            });
+        });</script>
 
 </body>
 </html>
