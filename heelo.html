@@ -1,21 +1,233 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello world</title>
+    <title>Profile // John Doe // Hack.net</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="d-flex align-items-center justify-content-center min-vh-100">
+<body>
 
-    <div class="hack-card p-4 text-center">
-        <h1 class="mb-3">Hello world</h1>
-        <p class="mb-4">Rest up traveler. Here. Have a plushie.</p>
-        <img src="miku.jpg" alt="Hatsune Miku marketable plushie" class="img-fluid rounded hack-img mb-3">
-        <a href="main.html" class="d-block hack-link mt-2">go back</a>
+    <canvas id="matrix-canvas"></canvas>
+    <div class="outer-wrap">
+
+        <div class="page-header">
+            <h1>HACK.NET <span class="blink">_</span></h1>
+            <p class="subtitle">// OPERATOR PROFILE // CLEARANCE: MAXIMUM //</p>
+        </div>
+
+        <!-- Profile header -->
+        <div class="profile-header">
+            <div class="avatar-wrap">
+                <svg viewBox="0 0 70 100" xmlns="http://www.w3.org/2000/svg" fill="rgb(1,215,5)">
+                    <ellipse cx="35" cy="18" rx="14" ry="16"/>
+                    <path d="M18 40 Q15 55 12 75 L28 75 L28 55 L35 60 L42 55 L42 75 L58 75 Q55 55 52 40 Q44 50 35 48 Q26 50 18 40Z"/>
+                    <path d="M18 40 Q8 45 6 60 L14 62 Q16 50 22 46Z"/>
+                    <path d="M52 40 Q62 45 64 60 L56 62 Q54 50 48 46Z"/>
+                </svg>
+            </div>
+
+            <div class="profile-name">JOHN DOE</div>
+            <div class="profile-alias">// ALIAS: gh0stbyte // SECTOR 7 //</div>
+
+            <div class="profile-badges">
+                <span class="profile-badge red">WANTED</span>
+                <span class="profile-badge orange">THREAT LVL: MAXIMUM</span>
+                <span class="profile-badge">ELITE HACKER</span>
+                <span class="profile-badge">SOCK ENTHUSIAST</span>
+                <span class="profile-badge">SUDO USER</span>
+                <span class="profile-badge">CERTIFIED ROUTER YELLER</span>
+            </div>
+
+            <div class="profile-bio">
+                John Doe is the world's most wanted hacker and also its most accident-prone.
+                Known for accidentally hacking his own laptop three times in one week, deploying
+                Comic Sans at the kernel level on his own machine, and once sending a 47-page
+                document to Gerald's printer. Considered extremely dangerous. Mostly to himself.
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">1,337</div>
+                    <div class="stat-label">HACKS ATTEMPTED</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">HACKS SUCCEEDED</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">OWN LAPTOPS HACKED</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card">
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">GERALD'S PRINT JOBS</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+
+            <!-- Personal info -->
+            <div class="col-12 col-md-6">
+                <div class="info-block">
+                    <div class="info-block-title">// OPERATOR DATA //</div>
+                    <div class="info-row">
+                        <span class="info-key">REAL NAME</span>
+                        <span class="info-val">John Doe (probably)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">DATE OF BIRTH</span>
+                        <span class="info-val">2000-01-01</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">LOCATION</span>
+                        <span class="info-val">Sector 7 / Gerald's Street</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">EMAIL</span>
+                        <span class="info-val">john@hack.net</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">FAVOURITE SOCK</span>
+                        <span class="info-val">Wool (winter config)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">ROUTER STATUS</span>
+                        <span class="info-val">Yelled at today ✓</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">CURRENT PASSWORD</span>
+                        <span class="info-val">password1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="col-12 col-md-6">
+                <div class="info-block">
+                    <div class="info-block-title">// SKILL ASSESSMENT //</div>
+                    <div class="info-row">
+                        <span class="info-key">TYPING SPEED</span>
+                        <span class="info-val">Very fast (looks cool)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">SUDO PROFICIENCY</span>
+                        <span class="info-val">████████░░ 80%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">SOCK DEPLOYMENT</span>
+                        <span class="info-val">██████████ 100%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">ROUTER ACOUSTICS</span>
+                        <span class="info-val">█████████░ 90%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">NOT HACKING SELF</span>
+                        <span class="info-val">██░░░░░░░░ 20%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">PRINTER AVOIDANCE</span>
+                        <span class="info-val">░░░░░░░░░░ 0%</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-key">OVERALL THREAT</span>
+                        <span class="info-val" style="color: #ff4444; text-shadow: 0 0 6px #ff4444;">MAXIMUM</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Activity log -->
+        <div class="info-block mb-4">
+            <div class="info-block-title">// RECENT ACTIVITY LOG //</div>
+            <div class="log-entry">
+                <span class="log-time">TODAY 03:42</span>
+                <span class="log-text">Attempted to infiltrate the Pentagon. Accidentally applied for a Pentagon internship instead.</span>
+                <span class="log-status warn">ACCIDENTAL</span>
+            </div>
+            <div class="log-entry">
+                <span class="log-time">TODAY 02:17</span>
+                <span class="log-text">Deployed Caps Lock Inversion Worm. Target unaffected. Own keyboard now inverted.</span>
+                <span class="log-status fail">SELF-INFECTED</span>
+            </div>
+            <div class="log-entry">
+                <span class="log-time">YESTERDAY</span>
+                <span class="log-text">Successfully hacked a smart fridge. Fridge now displays "ACCESS GRANTED" and won't stop ordering milk.</span>
+                <span class="log-status">SUCCESS</span>
+            </div>
+            <div class="log-entry">
+                <span class="log-time">2 DAYS AGO</span>
+                <span class="log-text">Attempted photon reflection password capture. Neighbour knocked on door asking why there was a mirror aimed at his window.</span>
+                <span class="log-status fail">COMPROMISED</span>
+            </div>
+            <div class="log-entry">
+                <span class="log-time">3 DAYS AGO</span>
+                <span class="log-text">Sent 47-page classified document to Gerald's printer again. Gerald has framed page 12 and put it on his wall.</span>
+                <span class="log-status warn">GERALD AGAIN</span>
+            </div>
+            <div class="log-entry">
+                <span class="log-time">LAST WEEK</span>
+                <span class="log-text">Overclock attempt with hair dryer went 4 seconds over the 90-second limit. Electrons overshot. Laptop now runs at -40% speed.</span>
+                <span class="log-status fail">UNDERCLOCKED</span>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <a href="main.html" class="hack-link" style="font-size: 13px; opacity: 0.5;">← back to base</a>
+        </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>        // ── Matrix rain ──────────────────────────────────
+        const canvas = document.getElementById("matrix-canvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        window.addEventListener("resize", () => {
+            canvas.width  = window.innerWidth;
+            canvas.height = window.innerHeight;
+            columns = Math.floor(canvas.width / fontSize);
+            drops = Array(columns).fill(1);
+        });
+
+        const fontSize = 14;
+        const chars = "アイウエオカキクケコサシスセソタチツテトナニヌネノ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%^&*()";
+        let columns = Math.floor(canvas.width / fontSize);
+        let drops = Array(columns).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "rgb(1, 215, 5)";
+            ctx.font = fontSize + "px 'Courier New', monospace";
+
+            for (let i = 0; i < drops.length; i++) {
+                const char = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 45);
+    </script>
 </body>
 </html>

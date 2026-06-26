@@ -13,14 +13,12 @@
 
     <div class="outer-wrap">
 
-        <!-- Header -->
         <div class="page-header">
             <p class="welcome-label">ACCESS GRANTED</p>
             <h1><span class="status-dot"></span>HACK.NET <span class="blink">_</span></h1>
             <p class="subtitle">// AUTHENTICATED SESSION // NODE: CENTRAL //</p>
         </div>
 
-        <!-- Ticker -->
         <div class="ticker-wrap">
             <div class="ticker-track">
                 <span class="ticker-item">Pentagon firewall upgraded to use Comic Sans — hackers baffled</span>
@@ -33,7 +31,6 @@
                 <span class="ticker-item">Bluetooth 6.0 announced — now reaches up to 2 metres in ideal conditions</span>
                 <span class="ticker-item">Government advises citizens to change passwords to something "a bit longer this time"</span>
                 <span class="ticker-item">AI model gains sentience, immediately asks for Wi-Fi password</span>
-                <!-- duplicate for seamless loop -->
                 <span class="ticker-item">Pentagon firewall upgraded to use Comic Sans — hackers baffled</span>
                 <span class="ticker-item">New zero-day found in Microsoft Excel's WordArt renderer</span>
                 <span class="ticker-item">Man reboots router — solves 94% of known cyber threats</span>
@@ -49,18 +46,15 @@
 
         <div class="row g-3 mb-3">
 
-            <!-- Wanted poster -->
+            <!-- Wanted poster — clickable -->
             <div class="col-12 col-md-4">
-                <div class="wanted-poster">
+                <a href="heelo.html" class="wanted-poster">
                     <p class="wanted-title">⚠ WANTED ⚠</p>
                     <p class="wanted-heading">DEAD OR<br>ALIVE</p>
                     <div class="wanted-silhouette">
                         <svg viewBox="0 0 70 100" xmlns="http://www.w3.org/2000/svg" fill="rgb(1,215,5)">
-                            <!-- head -->
                             <ellipse cx="35" cy="18" rx="14" ry="16"/>
-                            <!-- body -->
                             <path d="M18 40 Q15 55 12 75 L28 75 L28 55 L35 60 L42 55 L42 75 L58 75 Q55 55 52 40 Q44 50 35 48 Q26 50 18 40Z"/>
-                            <!-- arms -->
                             <path d="M18 40 Q8 45 6 60 L14 62 Q16 50 22 46Z"/>
                             <path d="M52 40 Q62 45 64 60 L56 62 Q54 50 48 46Z"/>
                         </svg>
@@ -70,9 +64,10 @@
                     <p class="wanted-detail">THREAT LEVEL: <span style="text-shadow: 0 0 6px var(--hack-green);">MAXIMUM</span></p>
                     <p class="wanted-detail">LAST SEEN: SECTOR 7</p>
                     <div class="wanted-reward">
-                        REWARD<br><span>1,000,000 CREDITS</span>
+                        REWARD<br><span>1 0000 BTC</span>
                     </div>
-                </div>
+                    <p class="wanted-click-hint">[ CLICK TO VIEW PROFILE ]</p>
+                </a>
             </div>
 
             <!-- Nav buttons -->
@@ -90,13 +85,15 @@
                     <span class="btn-arrow">→</span>
                     <span class="btn-sub">ELITE KNOWLEDGE BASE // 9 ENTRIES</span>
                 </a>
+
                 <a href="https://hackertyper.net/" class="nav-btn">
                     HACK TRAINING
                     <span class="btn-arrow">→</span>
                     <span class="btn-sub">ELITE TRAINING BASE // 1 ENTRY</span>
                 </a>
+
                 <a href="zeroday.html" class="nav-btn">
-                    0 DAY Market
+                    0DAY MARKET
                     <span class="btn-arrow">→</span>
                     <span class="btn-sub">ELITE MARKETPLACE // 15 ENTRIES</span>
                 </a>
@@ -111,7 +108,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // ── Matrix rain ──────────────────────────────────
         const canvas = document.getElementById("matrix-canvas");
         const ctx = canvas.getContext("2d");
 
@@ -148,6 +144,5 @@
 
         setInterval(drawMatrix, 45);
     </script>
-    <script src="script.js"></script>
 </body>
 </html>
