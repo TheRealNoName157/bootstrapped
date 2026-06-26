@@ -9,20 +9,6 @@ const CORRECT = {
 const REDIRECT_URL = "main.html";
 // ──────────────────────────────────────────────────
 
-// Toggle links
-const toggleBtn = document.getElementById("btn");
-const links = document.querySelectorAll(".link-toggle");
-let linksVisible = true;
-
-toggleBtn.addEventListener("click", function () {
-    linksVisible = !linksVisible;
-    links.forEach(link => {
-        link.classList.toggle("hidden", !linksVisible);
-    });
-    toggleBtn.textContent = linksVisible ? "// hide links //" : "// show links //";
-});
-
-// Form validation + redirect
 const form = document.querySelector("form");
 
 form.addEventListener("submit", function (e) {
@@ -32,13 +18,6 @@ form.addEventListener("submit", function (e) {
     const surname = document.getElementById("surname").value.trim();
     const date    = document.getElementById("date").value;
     const email   = document.getElementById("email").value.trim();
-
-    // ── DEBUG: open browser console (F12) to see these ──
-    console.log("name:   ", JSON.stringify(name),    " | expected:", JSON.stringify(CORRECT.name));
-    console.log("surname:", JSON.stringify(surname), " | expected:", JSON.stringify(CORRECT.surname));
-    console.log("date:   ", JSON.stringify(date),    " | expected:", JSON.stringify(CORRECT.date));
-    console.log("email:  ", JSON.stringify(email),   " | expected:", JSON.stringify(CORRECT.email));
-    // ────────────────────────────────────────────────────
 
     if (
         name    === CORRECT.name    &&
